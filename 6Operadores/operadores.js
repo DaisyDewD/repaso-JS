@@ -123,3 +123,23 @@ if (yo % 2 == 0) {
 }
 
 
+//operador condicional (ternario)
+
+let edad = 18;
+let mensaje = (edad >= 18) ? "Puedes ingresar" : "Debes ser mayor de edad";
+console.log(mensaje);
+
+//Convertir de string a número
+
+let string = "123";
+let numero = Number(string);
+console.log(numero);
+
+
+//Convertir de número a boolean
+
+let numero2 = 123;
+let boolean = Boolean(numero2);
+console.log(boolean);
+
+

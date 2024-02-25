@@ -1,16 +1,12 @@
 //Ejercicio 1
-//Para entrar al casino hay que ser mayor de edad. Escribe un programa que pregunte al usuario su edad. Si tiene 18 años o más, que le muestre el mensaje "Puedes ingresar", de lo contrario, "Debes ser mayor de edad".
+//Usa operador ternario. Para entrar al casino hay que ser mayor de edad. Escribe un programa que pregunte al usuario su edad. Si tiene 18 años o más, que le muestre el mensaje "Puedes ingresar", de lo contrario, "Debes ser mayor de edad".
 
 let edad = 18;
-if(edad >= 18){
-    console.log("Eres mayor de edad");
-}
-else{
-    console.log("Eres menor de edad");
-}
+let mensaje = (edad >= 18) ? "Puedes ingresar" : "Debes ser mayor de edad";
+console.log(mensaje);
 
 //Ejercicio 2
-//El casino pide que en el juego de la ruleta, el sistema muestre en pantalla si el número es par o impar. Escribe un programa que tome el número y muestre un mensaje si el número es par o impar.
+//Usa módulo. El casino pide que en el juego de la ruleta, el sistema muestre en pantalla si el número es par o impar. Escribe un programa que tome el número y muestre un mensaje si el número es par o impar.
 
 let yo = 9;
 

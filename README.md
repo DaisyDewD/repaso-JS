@@ -249,14 +249,15 @@ var edad = 18;
 var resultado = (edad >= 18) ? "Puede votar" : "No puede votar";
 console.log(resultado);
 ```
-
+---
 ## Ejercicios en el casino
 
 1. Para entrar al casino hay que ser mayor de edad. Escribe un programa que pregunte al usuario su edad. Si tiene 18 años o más, que le muestre el mensaje "Puedes ingresar", de lo contrario, "Debes ser mayor de edad".
-1. El casino pide que en el juego de la ruleta, el sistema muestre en pantalla si el número es par o impar. Escribe un programa que tome el número y muestre un mensaje si el número es par o impar.
+
+2. El casino pide que en el juego de la ruleta, el sistema muestre en pantalla si el número es par o impar. Escribe un programa que tome el número y muestre un mensaje si el número es par o impar.
 3. Escribe un programa que diga cuántos créditos tiene el usuario. Sin embargo, el casino ofrece salvación de rachas, pero con un único intento. Si tiene 0, que le muestre el mensaje "No tienes créditos. Tienes un intento". Si no quedan más intentos, que le muestre el mensaje "¡Lo intentaste!. Consigue más créditos". Si tiene más de 0, que le muestre el mensaje "Tienes x créditos".
 4. Usa &&. Los 10 mejores jugadores tendrán la oportunidad de ganar un premio cada hora. Escribe un programa que les envíe un mensaje de texto "¡Felicidades! Eres uno de los 10 mejores jugadores para esta tanda". Si no, que no les envíe nada.
 5. Usa ||. Escribe un programa que le pregunte al usuario si quiere jugar a los Naipes con apuestas o sin apuestas, en cualquier caso, que le muestre el mensaje "¡A jugar!".
-
+---
 
 

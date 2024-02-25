@@ -19,6 +19,7 @@
       - [Postincremento (variable++):](#postincremento-variable)
       - [En combinación con otras operaciones:](#en-combinación-con-otras-operaciones)
     - [Operador condicional (ternario):](#operador-condicional-ternario)
+  - [Ejercicios](#ejercicios)
 
 # Mis apuntes del curso
 
@@ -249,5 +250,18 @@ var resultado = (edad >= 18) ? "Puede votar" : "No puede votar";
 console.log(resultado);
 ```
 
+## Ejercicios
+
+1. Ejercicio número par en JavaScript
+```javascript
+
+let a = 10;
+
+if (a % 2 == 0) {
+    console.log("El número es par");
+} else {
+    console.log("El número es impar");
+}
+```
 
 

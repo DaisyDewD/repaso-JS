@@ -31,6 +31,7 @@
     - [Ciclo for-of](#ciclo-for-of)
     - [Sentencias break y continue](#sentencias-break-y-continue)
   - [Arreglos](#arreglos)
+  - [Funciones](#funciones)
 - [Ejercicios en el casino](#ejercicios-en-el-casino)
 
 # Mis apuntes del curso
@@ -400,6 +401,57 @@ para modificar un arreglo
 let colores = ["rojo", "verde", "azul"];
 colores[0] = "amarillo";
 console.log(colores); // ["amarillo", "verde", "azul"]
+```
+## Funciones
+Las funciones son bloques de código que se pueden reutilizar. Se definen una vez y se pueden llamar en cualquier momento. Las funciones pueden tomar parámetros y devolver un valor.
+```javascript
+function saludar() {
+  console.log("Hola");
+}
+// Llamada a la función
+saludar();
+```
+Las funciones pueden tomar parámetros y devolver un valor.
+```javascript
+function saludar(nombre) {
+  console.log("Hola " + nombre);
+}
+saludar("Juan");
+```
+Las funciones pueden devolver un valor.
+```javascript
+function sumar(a, b) {
+  return a + b;
+}
+let resultado = sumar(5, 3);
+console.log(resultado); // 8
+```
+Función de tipo de expresión (function expression) son funciones que se asignan a una variable.
+```javascript
+let sumar = function(a, b) {
+  return a + b;
+};
+let resultado = sumar(5, 3);
+console.log(resultado); // 8
+```
+Función flecha (arrow function) es una forma más corta de escribir una función. Esta omite la palabra clave function y utiliza => para separar los parámetros de la función del cuerpo de la función.
+```javascript
+let sumar = (a, b) => a + b;
+let resultado = sumar(5, 3);
+console.log(resultado); // 8
+```
+Función flecha con más de un parámetro. 
+```javascript
+let sumar = (a, b) => {
+  return a + b;
+};
+let resultado = sumar(5, 3);
+console.log(resultado); // 8
+```
+Función flecha sin parámetros. Si la función flecha no tiene parámetros, se deben incluir paréntesis vacíos.
+```javascript
+let saludar = () => console.log("Hola");
+saludar();
 ```
 
 

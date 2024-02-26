@@ -19,7 +19,18 @@
       - [Postincremento (variable++):](#postincremento-variable)
       - [En combinación con otras operaciones:](#en-combinación-con-otras-operaciones)
     - [Operador condicional (ternario):](#operador-condicional-ternario)
-  - [Ejercicios en el casino](#ejercicios-en-el-casino)
+  - [Sentencias de control de flujo](#sentencias-de-control-de-flujo)
+    - [if, else](#if-else)
+    - [if, else if, else](#if-else-if-else)
+    - [switch](#switch)
+  - [Ciclos](#ciclos)
+    - [Ciclo while.](#ciclo-while)
+    - [Ciclo do-while](#ciclo-do-while)
+    - [Ciclo for](#ciclo-for)
+    - [Ciclo for-in](#ciclo-for-in)
+    - [Ciclo for-of](#ciclo-for-of)
+    - [Sentencias break y continue](#sentencias-break-y-continue)
+- [Ejercicios en el casino](#ejercicios-en-el-casino)
 
 # Mis apuntes del curso
 
@@ -249,15 +260,140 @@ var edad = 18;
 var resultado = (edad >= 18) ? "Puede votar" : "No puede votar";
 console.log(resultado);
 ```
+
+## Sentencias de control de flujo
+### if, else
+  
+  ```javascript
+  if (condición) {
+    // código a ejecutar si la condición es verdadera
+  } else {
+    // código a ejecutar si la condición es falsa
+  }
+  ```
+### if, else if, else
+  ```javascript
+if (condición) {
+    // código a ejecutar si la condición es verdadera
+} else if (otraCondición) {
+    // código a ejecutar si la otra condición es verdadera y puede haber más de una
+} else {
+    // código a ejecutar si la condición y la otra condición son falsas
+}
+```
+### switch
+```javascript
+var dia = 3;
+switch (dia) {
+    case 1:
+        console.log("Lunes");
+        break;
+    case 2:
+        console.log("Martes");
+        break;
+    case 3:
+        console.log("Miércoles");
+        break;
+    case 4:
+        console.log("Jueves");
+        break;
+    case 5:
+        console.log("Viernes");
+        break;
+    case 6:
+        console.log("Sábado");
+        break;
+    case 7:
+        console.log("Domingo");
+        break;
+    default:
+        console.log("Día no válido");
+}
+```
+
+## Ciclos
+### Ciclo while.
+El ciclo while ejecuta una sentencia o bloque de sentencias hasta que la condición especificada se evalúe como falsa. La condición se evalúa antes de ejecutar la sentencia.
+```javascript
+let i = 0;
+while (i < 5) {
+  console.log(i+" while");
+  i++;
+}
+```
+### Ciclo do-while
+El ciclo do-while ejecuta una sentencia o bloque de sentencias hasta que la condición especificada se evalúe como falsa. La condición se evalúa después de ejecutar la sentencia, lo que garantiza que la sentencia se ejecute al menos una vez.
+```javascript
+let j = 0;
+do {
+  console.log(j + " do-while");
+  j++;
+}
+while (j < 2);
+
+```
+### Ciclo for
+El ciclo for se repite hasta que la condición especificada se evalúe como falsa. El ciclo for se utiliza cuando el número de repeticiones es conocido. El ciclo for se compone de tres partes: inicialización, condición y expresión final.
+```javascript
+for (let i = 0; i < 6; i++) {
+  console.log(i + " for");
+}
+```
+### Ciclo for-in
+El ciclo for-in se utiliza para recorrer las propiedades de un objeto. Las propiedades de un objeto incluyen las propiedades heredadas del prototipo del objeto. El ciclo for-in se utiliza para recorrer las propiedades de un objeto.
+```javascript
+let persona = {
+  nombre: "Juan",
+  apellido: "Pérez",
+  edad: 30
+};
+for (let propiedad in persona) {
+  console.log(propiedad + ": " + persona[propiedad] + " for-in");
+}
+```
+### Ciclo for-of
+El ciclo for-of se utiliza para recorrer los elementos de un objeto iterable como un arreglo. El ciclo for-of se utiliza para recorrer los elementos de un objeto iterable como un arreglo.
+```javascript
+let colores = ["rojo", "verde", "azul"];
+for (let color of colores) {
+  console.log(color + " for-of");
+}
+```
+### Sentencias break y continue
+La sentencia break termina el ciclo actual y transfiere el control del programa a la siguiente instrucción que sigue al ciclo. La sentencia continue termina la iteración
+```javascript
+let k = 0;
+while (k < 10) {
+  if (k == 5) {
+    break;
+  }
+  console.log(k + " break");
+  k++;
+}
+let l = 0;
+while (l < 10) {
+  if (l == 5) {
+    l++;
+    continue;
+  }
+  console.log(l + " continue");
+  l++;
+}
+```
 ---
-## Ejercicios en el casino
+# Ejercicios en el casino
 
 1. Para entrar al casino hay que ser mayor de edad. Escribe un programa que pregunte al usuario su edad. Si tiene 18 años o más, que le muestre el mensaje "Puedes ingresar", de lo contrario, "Debes ser mayor de edad".
 
 2. El casino pide que en el juego de la ruleta, el sistema muestre en pantalla si el número es par o impar. Escribe un programa que tome el número y muestre un mensaje si el número es par o impar.
-3. Escribe un programa que diga cuántos créditos tiene el usuario. Sin embargo, el casino ofrece salvación de rachas, pero con un único intento. Si tiene 0, que le muestre el mensaje "No tienes créditos. Tienes un intento". Si no quedan más intentos, que le muestre el mensaje "¡Lo intentaste!. Consigue más créditos". Si tiene más de 0, que le muestre el mensaje "Tienes x créditos".
+
+3. Usa sentencias de control. Escribe un programa que diga cuántos créditos tiene el usuario. Sin embargo, el casino ofrece salvación de rachas, pero con un único intento. Si tiene 0, que le muestre el mensaje "No tienes créditos. Tienes un intento". Si no quedan más intentos, que le muestre el mensaje "¡Lo intentaste!. Consigue más créditos". Si tiene más de 0, que le muestre el mensaje "Tienes x créditos".
+
 4. Usa &&. Los 10 mejores jugadores tendrán la oportunidad de ganar un premio cada hora. Escribe un programa que les envíe un mensaje de texto "¡Felicidades! Eres uno de los 10 mejores jugadores para esta tanda". Si no, que no les envíe nada.
+
 5. Usa ||. Escribe un programa que le pregunte al usuario si quiere jugar a los Naipes con apuestas o sin apuestas, en cualquier caso, que le muestre el mensaje "¡A jugar!".
+
+6. Usa sentencias de control. Escribe un programa que según la estación, muestre promociones en el casino. Si es invierno, que muestre el mensaje "¡Ven al casino! Tenemos promociones en bebidas calientes". Si es verano, que muestre el mensaje "¡Ven al casino! Tenemos promociones en bebidas alcohólicas". Si es primavera, que muestre el mensaje "¡Para dos es mejor! Refiere a alguien y te obsequiamos 10 créditos". Si es otoño, que muestre el mensaje "¡Ven al casino! Tenemos doble puntaje en blackjack".
 ---
 
 

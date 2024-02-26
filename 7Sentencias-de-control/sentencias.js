@@ -1,145 +1,79 @@
-// operadores aritméticos
+//Sentencias if, else
+//Dentro de los parentesis de la sentencia if se coloca la condición que se quiere evaluar. Si la condición es verdadera, se ejecutará el código que se encuentra dentro de las llaves. Si la condición es falsa, se ejecutará el código que se encuentra dentro de las llaves del else.
 
-// suma
+var a = 10;
+var b = 20;
 
-let a = 5;
-let b = 2;
-let c = a + b;
-console.log(c);
+if (a > b) {
+    console.log("a es mayor que b");
+}
+else {
+    console.log("a es menor que b");
+}
 
-// resta
+//Sentencias if, else if, else
+//Dentro de los parentesis de la sentencia if se coloca la condición que se quiere evaluar. Si la condición es verdadera, se ejecutará el código que se encuentra dentro de las llaves. Si la condición es falsa, se ejecutará el código que se encuentra dentro de las llaves del else if. Si ninguna de las condiciones se cumple, se ejecutará el código que se encuentra dentro de las llaves del else.
 
-let d = 5;
-let e = 2;
-let f = d - e;
-console.log(f);
+var c = 10;
+var d = 10;
 
-// multiplicación
-
-let g = 5;
-let h = 2;
-let i = g * h;
-console.log(i);
-
-// división
-
-let j = 5;
-let k = 2;
-let l = j / k;
-console.log(l);
-
-// módulo
-
-let m = 5;
-let n = 2;
-let o = m % n;
-console.log(o);
-
-// incremento
-
-let p = 5;
-p++;
-console.log(p);
-
-// decremento
-
-let q = 5;
-q--;
-console.log(q);
-
-// operadores de asignación
-
-let r = 5;
-r += 3;
-console.log(r);
-
-let s = 5;
-s -= 3;
-console.log(s);
-
-let t = 5;
-t *= 3;
-console.log(t);
-
-// operadores de comparación
-
-let u = 5;
-let v = 5;
-console.log(u == v);
-
-let w = 5;
-let x = 5;
-console.log(w === x);
-
-let y = 5;
-let z = 5;
-console.log(y != z);
-
-
-// operadores lógicos
-// mayor que
-let aa = 5;
-let ab = 5;
-console.log(aa > ab);
-
-//menor que
-let ac = 5;
-let ad = 5;
-console.log(ac < ad);
-
-//mayor o igual que
-let ae = 5;
-let af = 5;
-console.log(ae >= af);
-
-//menor o igual que
-let ag = 5;
-let ah = 5;
-console.log(ag <= ah);
-
-//and
-let ai = 5;
-let aj = 5;
-console.log(ai && aj);
-
-//or
-let ak = 5;
-let al = 5;
-console.log(ak || al);
-
-//not
-let am = 5;
-let an = 5;
-console.log(!am);
-
-
-
-let yo = 9;
-
-if (yo % 2 == 0) {
-    console.log("El número es par");
-} else {
-    console.log("El número es impar");
+if (c > d) {
+    console.log("c es mayor que d");
+}
+else if (c == d) {
+    console.log("c es igual a d");
+}
+else {
+    console.log("c es menor que d");
 }
 
 
-//operador condicional (ternario)
+//Sentencias switch
 
-let edad = 18;
-let mensaje = (edad >= 18) ? "Puedes ingresar" : "Debes ser mayor de edad";
-console.log(mensaje);
+var dia = "jueves";
 
-//Convertir de string a número
+switch (dia) {
 
-let string = "123";
-let numero = Number(string);
-console.log(numero);
-
-
-//Convertir de número a boolean
-
-let numero2 = 123;
-let boolean = Boolean(numero2);
-console.log(boolean);
-
-
+    case "lunes":
+        console.log("Hoy es lunes");
+        break;
+    case "martes":
+        console.log("Hoy es martes");
+        break;
+    case "miércoles":
+        console.log("Hoy es miércoles");
+        break;
+    case "jueves":
+        console.log("Hoy es jueves");
+        break;
+    case "viernes":
+        console.log("Hoy es viernes");
+        break;
+    case "sábado":
+        console.log("Hoy es sábado");
+        break;
+    case "domingo":
+        console.log("Hoy es domingo");
+        break;
+    default:
+        console.log("Ingrese un día válido");
+        break;
+}
+//Sentencias break y continue (Ver While en Ejercicios/ciclos.js)
+let k = 0;
+while (k < 10) {
+  if (k == 5) {
+    break;
+  }
+  console.log(k);
+  k++;
+}
+let l = 0;
+while (l < 10) {
+  if (l == 5) {
+    l++;
+    continue;
+  }
+  console.log(l);
+  l++;
+}

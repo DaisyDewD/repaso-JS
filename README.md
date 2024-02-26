@@ -30,6 +30,7 @@
     - [Ciclo for-in](#ciclo-for-in)
     - [Ciclo for-of](#ciclo-for-of)
     - [Sentencias break y continue](#sentencias-break-y-continue)
+  - [Arreglos](#arreglos)
 - [Ejercicios en el casino](#ejercicios-en-el-casino)
 
 # Mis apuntes del curso
@@ -89,7 +90,7 @@ if (true) {
     console.log(x); // imprime 20
 }
 
-console.log(x); // imprime 20ç
+console.log(x); // imprime 20
 ```
 
   #### let: (Se recomienda su uso) Ej: contador, acumulador, etc
@@ -380,6 +381,28 @@ while (l < 10) {
   l++;
 }
 ```
+
+## Arreglos
+Para acceder a un elemento de un arreglo
+```javascript
+let colores = ["rojo", "verde", "azul"];
+console.log(colores[0]); // rojo
+```
+para recorrer un arreglo
+```javascript
+let colores = ["rojo", "verde", "azul"];
+for (let i = 0; i < colores.length; i++) {
+  console.log(colores[i]);
+}
+```
+para modificar un arreglo
+```javascript
+let colores = ["rojo", "verde", "azul"];
+colores[0] = "amarillo";
+console.log(colores); // ["amarillo", "verde", "azul"]
+```
+
+
 ---
 # Ejercicios en el casino
 

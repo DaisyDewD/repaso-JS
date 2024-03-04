@@ -54,3 +54,26 @@ let apuesta = "si";
 if (apuesta == "si" || apuesta == "no") {
     console.log("¡A jugar!");
 }
+
+//Ejercicio 6
+//Usa sentencias de control. Escribe un programa que según en mes, muestre promociones en el casino. Si es invierno, que muestre el mensaje "¡Ven al casino! Tenemos promociones en bebidas calientes". Si es verano, que muestre el mensaje "¡Ven al casino! Tenemos promociones en bebidas alcohólicas". Si es primavera, que muestre el mensaje "¡Para dos es mejor! Refiere a alguien y te obsequiamos 10 créditos". Si es otoño, que muestre el mensaje "¡Ven al casino! Tenemos doble puntaje en blackjack".
+
+
+let mes = "octubre";
+
+if (mes == "diciembre" || mes == "enero" || mes == "febrero") {
+    console.log("¡Ven al casino! Tenemos promociones en bebidas calientes");
+}
+else if (mes == "marzo" || mes == "abril" || mes == "mayo") {
+    console.log("¡Ven al casino! Tenemos promociones en bebidas alcohólicas");
+}
+else if (mes == "junio" || mes == "julio" || mes == "agosto") {
+    console.log("¡Para dos es mejor! Refiere a alguien y te obsequiamos 10 créditos");
+}
+else if (mes == "septiembre" || mes == "octubre" || mes == "noviembre") {
+    console.log("¡Ven al casino! Tenemos doble puntaje en blackjack");
+}
+
+
+
+

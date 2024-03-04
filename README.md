@@ -32,6 +32,8 @@
     - [Sentencias break y continue](#sentencias-break-y-continue)
   - [Arreglos](#arreglos)
   - [Funciones](#funciones)
+  - [Objetos](#objetos)
+    - [Métodos en objetos](#métodos-en-objetos)
 - [Ejercicios en el casino](#ejercicios-en-el-casino)
 
 # Mis apuntes del curso
@@ -453,6 +455,32 @@ Función flecha sin parámetros. Si la función flecha no tiene parámetros, se 
 let saludar = () => console.log("Hola");
 saludar();
 ```
+## Objetos
+Los objetos son colecciones de propiedades y métodos. Las propiedades son pares clave-valor. Las propiedades de un objeto pueden ser de tipo string, number, boolean, array, object, function, symbol o null. Los métodos son funciones que se definen como propiedades de un objeto.
+```javascript
+let mascota = {
+  nombre: "Sakura",
+  edad: 8,
+  vacunas: true,
+  raza: "gato",
+  }
+console.log(mascota.nombre); // Sakura
+};
+```
+### Métodos en objetos
+Los métodos son funciones que se definen como propiedades de un objeto.
+```javascript
+let mascota2 = {
+  nombre: "Papaya",
+  edad: 8,
+  vacunas: true,
+  raza: "gato",
+  maullar: function() {
+    console.log("Miau");
+  }
+  console.log(mascota2.maullar()); // Miau
+};
+```
 
 
 ---
@@ -468,7 +496,7 @@ saludar();
 
 5. Usa ||. Escribe un programa que le pregunte al usuario si quiere jugar a los Naipes con apuestas o sin apuestas, en cualquier caso, que le muestre el mensaje "¡A jugar!".
 
-6. Usa sentencias de control. Escribe un programa que según la estación, muestre promociones en el casino. Si es invierno, que muestre el mensaje "¡Ven al casino! Tenemos promociones en bebidas calientes". Si es verano, que muestre el mensaje "¡Ven al casino! Tenemos promociones en bebidas alcohólicas". Si es primavera, que muestre el mensaje "¡Para dos es mejor! Refiere a alguien y te obsequiamos 10 créditos". Si es otoño, que muestre el mensaje "¡Ven al casino! Tenemos doble puntaje en blackjack".
+6. Usa sentencias de control. Escribe un programa que según es mes, muestre promociones en el casino. Si es invierno, que muestre el mensaje "¡Ven al casino! Tenemos promociones en bebidas calientes". Si es verano, que muestre el mensaje "¡Ven al casino! Tenemos promociones en bebidas alcohólicas". Si es primavera, que muestre el mensaje "¡Para dos es mejor! Refiere a alguien y te obsequiamos 10 créditos". Si es otoño, que muestre el mensaje "¡Ven al casino! Tenemos doble puntaje en blackjack".
 ---
 
 

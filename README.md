@@ -34,6 +34,11 @@
   - [Funciones](#funciones)
   - [Objetos](#objetos)
     - [Métodos en objetos](#métodos-en-objetos)
+      - [Método get](#método-get)
+      - [Método set](#método-set)
+        - [Acceso a propiedades de un objeto](#acceso-a-propiedades-de-un-objeto)
+        - [Agregar, modificar y eliminar propiedades de un objeto](#agregar-modificar-y-eliminar-propiedades-de-un-objeto)
+        - [Formas de imprimir objetos](#formas-de-imprimir-objetos)
 - [Ejercicios en el casino](#ejercicios-en-el-casino)
 
 # Mis apuntes del curso
@@ -462,7 +467,7 @@ let mascota = {
   nombre: "Sakura",
   edad: 8,
   vacunas: true,
-  raza: "gato",
+  clase: "gato",
   }
 console.log(mascota.nombre); // Sakura
 };
@@ -474,13 +479,102 @@ let mascota2 = {
   nombre: "Papaya",
   edad: 8,
   vacunas: true,
-  raza: "gato",
+  clase: "gato",
   maullar: function() {
     console.log("Miau");
   }
-  console.log(mascota2.maullar()); // Miau
-};
+}
+mascota2.maullar(); // Miau
 ```
+#### Método get
+El método get se utiliza para obtener el valor de una propiedad de un objeto.
+```javascript
+let mascota6 = {
+  nombre: "Tinto",
+  apellido: "Brass",
+  edad: 10,
+  vacunas: true,
+  clase: "perro",
+ get nombreCompleto() {
+    return this.nombre + " " + this.apellido;
+  }
+}
+console.log(mascota6.nombreCompleto); // Tinto Brass
+```
+#### Método set
+El método set se utiliza para establecer el valor de una propiedad de un objeto.
+```javascript
+let mascota7 = {
+    nombre: "Tinto",
+    apellido: "Brass",
+    edad: 10,
+    vacunas: true,
+    clase: "perro",
+    get nombres () {
+        return this.nombre.toUpperCase();
+    },
+    set nombres (nom) {
+        this.nombre = nombre.toUpperCase();
+    },
+    }
+    console.log(mascota7.nom); //TINTO
+      mascota7.nom = "Alfredo";
+    console.log(mascota7.nom); //ALFREDO
+```
+
+##### Acceso a propiedades de un objeto
+```javascript
+let mascota3 = {
+  nombre: "Chiqui",
+  edad: 15,
+  vacunas: true,
+  clase: "gato",
+  pasatiempo: function() {
+    console.log("Dormir");
+  }
+}
+console.log(mascota3["nombre"]); // Chiqui
+
+for (let propiedad in mascota3) {
+  console.log(propiedad + ": " + mascota3[propiedad]); // nombre: Chiqui, edad: 15, vacunas: true, raza: gato, pasatiempo: function() { console.log("Dormir"); }
+}
+```
+##### Agregar, modificar y eliminar propiedades de un objeto
+
+```javascript
+let mascota4 = {
+  nombre: "Chess",
+  edad: 5,
+  vacunas: true,
+  clase: "perro"
+}
+mascota4.color = "blanco y negro";
+mascota4.edad = 6;
+delete mascota4.vacunas;
+```
+
+##### Formas de imprimir objetos
+
+```javascript
+let mascota5 = {
+    nombre: "Lola",
+    edad: 0.2,
+    vacunas: false,
+    clase: "ave"
+  }
+  console.log("Hola soy " + mascota5.nombre + " y soy un " + mascota5.clase)//Concatenando valores
+
+  for (propiedad in mascota5){
+    console.log(propiedad + ": " + mascota5[propiedad]);
+  } // for in
+
+  let = mascotaArray = Object.values(mascota5)
+    console.log(mascotaArray); //Array
+
+  let jsonString = JSON.stringify(mascota5)
+    console.log(jsonString); //Json String
+```
+
 
 
 ---
